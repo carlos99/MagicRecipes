@@ -1,0 +1,26 @@
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: magic_recipes_dev
+  pool: 5
+  username: rails_user
+  password: mint06
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: magic_recipes_test
+  pool: 5
+  username: rails_user
+  password: mint06
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: magic_recipes_production
+  pool: 5
+  username: rails_user
+  password: mint06 
