@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<p>
+			<%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "btn btn-success" %>
+		</p>
+			<h2><%=@recipe.name%></h2>
+			<p><%=@recipe.summary%></p>
+			<p><%=simple_format(@recipe.description)%></p>
+		</div>
+	</div>
+	<div class="row">
+		<p><%= link_to 'Return to Recipes List', recipes_path, class: 'btn btn-warning btn-lg' %></p>
+	</div>
+</div>

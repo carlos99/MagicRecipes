@@ -1,0 +1,18 @@
+<h1>All Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+	
+	<div class="row">
+		<div class="col-md-2">
+			<div class="chef-info center">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quo incidunt optio molestias magni, impedit dolores quam, veniam sint, quasi voluptatum aliquid deserunt illo ipsum voluptatem, repudiandae a totam corrupti.</p>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<h4><%= link_to recipe.name, recipe_path(recipe)%></h4>
+			<p><%= link_to recipe.summary, ""%></p>
+			<p><%= link_to recipe.description, ""%></p>
+		</div>
+	</div>
+
+<% end %>

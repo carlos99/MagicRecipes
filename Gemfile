@@ -15,6 +15,7 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'aws-sdk', '~> 1.59.1'
 gem 'will_paginate', '~> 3.0.7'
+gem 'pry', '~> 0.10.1'
 
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
