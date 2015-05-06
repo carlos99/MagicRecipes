@@ -6,6 +6,9 @@
 		</p>
 			<h2><%=@recipe.name%></h2>
 			<p><%=@recipe.summary%></p>
+			<div>
+				<%= image_tag (@recipe.picture.url) if @recipe.picture? %>
+			</div>
 			<p><%=simple_format(@recipe.description)%></p>
 		</div>
 	</div>

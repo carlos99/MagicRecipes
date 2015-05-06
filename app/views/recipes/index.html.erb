@@ -12,6 +12,9 @@
 			<h4><%= link_to recipe.name, recipe_path(recipe)%></h4>
 			<p><%= link_to recipe.summary, ""%></p>
 			<p><%= link_to recipe.description, ""%></p>
+			<p>
+				<%= image_tag(recipe.picture.url, size: "250x150", class: "img-responsive") if recipe.picture?%>
+			</p>
 		</div>
 	</div>
 
