@@ -1,9 +1,96 @@
+/*  Fonts  */
+@font-face {
+    font-family: 'wcmanonegrabta';
+    src: url('../fonts/wcmanonegrabta.eot');
+    src: url('../fonts/wcmanonegrabta.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/wcmanonegrabta.woff') format('woff'),
+         url('../fonts/wcmanonegrabta.ttf') format('truetype'),
+         url('../fonts/wcmanonegrabta.svg#wcmanonegrabta') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo-regular';
+    src: url('../fonts/aleo-regular.eot');
+    src: url('../fonts/aleo-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-regular.woff') format('woff'),
+         url('../fonts/aleo-regular.ttf') format('truetype'),
+         url('../fonts/aleo-regular.svg#aleo-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo-light';
+    src: url('../fonts/aleo-light.eot');
+    src: url('../fonts/aleo-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-light.woff') format('woff'),
+         url('../fonts/aleo-light.ttf') format('truetype'),
+         url('../fonts/aleo-light.svg#aleo-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo-italic';
+    src: url('../fonts/aleo-italic.eot');
+    src: url('../fonts/aleo-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-italic.woff') format('woff'),
+         url('../fonts/aleo-italic.ttf') format('truetype'),
+         url('../fonts/aleo-italic.svg#aleo-italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleo-bold';
+    src: url('../fonts/aleo-bold.eot');
+    src: url('../fonts/aleo-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aleo-bold.woff') format('woff'),
+         url('../fonts/aleo-bold.ttf') format('truetype'),
+         url('../fonts/aleo-bold.svg#aleo-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
-	font-family: 'Roboto', sans-serif !important;
+  background: #f1f1f1 !important;
+}
+
+header{
+  background-color: #fff;
+
+  nav a{
+    text-decoration: none;
+    color: #3b3b3b !important;
+    font-family: "aleo-regular", arial;
+    font-size: 14px;
+    letter-spacing: .5px;
+    padding-bottom: 10px !important;
+    padding-top: 30px !important;
+    border-bottom: 2px solid #fff !important;
+  }
+}
+
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 h1{
-	font-family: 'Roboto Condensed';
+	font-family: 'wcmanonegrabta';
+  color: #E9633B;
+}
+
+.customh2{
+  padding-bottom: 15px;
+  font-family: 'aleo-light';
 }
 
 .nav-styles{
@@ -16,4 +103,58 @@ h1{
   		color: #fff !important;
   	}
   }
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+  color: #E9633B !important;
+        border-bottom: 2px solid #E9633B !important;
+}
+
+.custom-jumbotron{
+  background: #fff;
+  margin-bottom: 0;
+  padding-top: 10px !important;
+  padding-bottom: 20px;
+}
+
+.recipes-index-view{
+  margin: 20px 0;
+}
+
+.center-title{
+  text-align: center;
+}
+
+.form-container{
+  label{
+    font-family: 'aleo-regular';
+    font-size: 16px;
+  }
+
+  input{
+    border-radius: 0;
+  }
+}
+
+.custom-btn{
+    background-color: #01548a;
+    border: 1px solid #3283C5;
+    color: #fff;
+    border-radius: 2px !important;
+    outline: 0;
+    text-align: center;
+    -webkit-transition: all .2s linear;
+    transition: all .2 linear;
+}
+
+.content-form-recipes{
+  background: #f1f1f1;
+
+}
+
+.frm-bg{
+  background: #fff;
+    border-radius: 4px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }

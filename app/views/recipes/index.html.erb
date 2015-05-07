@@ -1,11 +1,12 @@
-<h1>All Recipes</h1>
+<div class="container">
+<h1 class="center-title">All Recipes</h1>
 
 <% @recipes.each do |recipe| %>
 	
-	<div class="row">
-		<div class="col-md-2">
+	<div class="row recipes-index-view">
+		<div class="col-md-4">
 			<div class="chef-info center">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quo incidunt optio molestias magni, impedit dolores quam, veniam sint, quasi voluptatum aliquid deserunt illo ipsum voluptatem, repudiandae a totam corrupti.</p>
+				<%= image_tag(recipe.picture.url, size: "350x250", class: "img-responsive") if recipe.picture?%>
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -13,9 +14,11 @@
 			<p><%= link_to recipe.summary, ""%></p>
 			<p><%= link_to recipe.description, ""%></p>
 			<p>
-				<%= image_tag(recipe.picture.url, size: "250x150", class: "img-responsive") if recipe.picture?%>
+				
 			</p>
 		</div>
 	</div>
 
 <% end %>
+
+</div>
