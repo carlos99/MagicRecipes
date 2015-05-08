@@ -19,7 +19,7 @@ gem 'pry', '~> 0.10.1'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 3.8.0'
-gem 'fog', '1.23.0'
+gem 'fog', '~> 1.23.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

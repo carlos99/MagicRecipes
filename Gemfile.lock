@@ -234,7 +234,7 @@ DEPENDENCIES
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.1)
-  fog (= 1.23.0)
+  fog (~> 1.23.0)
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (~> 3.8.0)
