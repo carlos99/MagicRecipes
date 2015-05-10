@@ -1,6 +1,8 @@
 <div class="container">
 <h1 class="center-title">All Recipes</h1>
 
+<%= will_paginate %>
+
 <% @recipes.each do |recipe| %>
 	
 	<div class="row recipes-index-view">
@@ -13,6 +15,7 @@
 			<h4><%= link_to recipe.name, recipe_path(recipe)%></h4>
 			<p><%= link_to recipe.summary, ""%></p>
 			<p><%= link_to recipe.description, ""%></p>
+			<p><%= time_ago_in_words(recipe.created_at).humanize%></p>
 
 			<div class="pull-right">
 				<%= link_to like_recipe_path(recipe, like: true), method: :post do %>
@@ -27,5 +30,9 @@
 	</div>
 
 <% end %>
+
+<%= will_paginate %>
+
+<!-- <%= will_paginate @recipe, renderer: BootstrapPagination::Rails%> -->
 
 </div>
