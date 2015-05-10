@@ -13,9 +13,16 @@
 			<h4><%= link_to recipe.name, recipe_path(recipe)%></h4>
 			<p><%= link_to recipe.summary, ""%></p>
 			<p><%= link_to recipe.description, ""%></p>
-			<p>
-				
-			</p>
+
+			<div class="pull-right">
+				<%= link_to like_recipe_path(recipe, like: true), method: :post do %>
+					<i class="glyphicon glyphicon-thumbs-up"></i> &nbsp <%= recipe.thumbs_up_total%>
+				<% end %>&nbsp&nbsp&nbsp&nbsp&nbsp
+
+				<%= link_to like_recipe_path(recipe, like: false), method: :post do %>
+					<i class="glyphicon glyphicon-thumbs-down"></i> &nbsp <%= recipe.thumbs_down_total%>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
