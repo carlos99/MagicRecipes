@@ -1,0 +1,28 @@
+<%= render "shared/errors", obj: @chef %>
+	<div class="row form-container">
+		<%= form_for(@chef, html: { multipart: true })  do |f|  %>
+			<div class="form-group">
+		        <%= f.label :chef_name %>
+		        <%= f.text_field :chef_name, autofocus: true, class: "form-control" %>
+		     </div>
+
+		     <div class="form-group">
+		        <%= f.label :email %>
+		        <%= f.text_field :email, autofocus: true, class: "form-control"%>
+		     </div>
+
+		     <div class="form-group">
+		        <%= f.label :password %>
+		        <%= f.password_field :password, autofocus: true, class: "form-control"%>
+		     </div>
+
+		     <div class="form-group">
+		        <%= f.label :picture %>
+		        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', autofocus: true, class: "form-control"%>
+		     </div>
+
+		     <div class="form-group">
+		        <%= f.submit(@chef.new_record? ? "Create Chef" : "Edit Chef", class: "btn btn-primary custom-btn") %>
+		      </div>
+		<% end %>
+	</div>

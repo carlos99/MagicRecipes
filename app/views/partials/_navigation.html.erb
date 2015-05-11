@@ -11,9 +11,11 @@
             </button>
             <%= link_to image_tag('logo.png'), root_path, class: "navbar-brand"%>
           </div>
-          <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-            <li><%= link_to 'Create a New Recipe', new_recipe_path%></li>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav floting-menu">
+              <li><%= link_to 'Login', ''%></li>
+              <li><%= link_to 'Register', register_path%></li>
+              <li><%= link_to 'Create a New Recipe', new_recipe_path%></li>
               <li><%= link_to 'Recipes List', recipes_path%></li>
             </ul>
           </div>

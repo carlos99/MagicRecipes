@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 	def index
 		#@recipes = Recipe.all.sort_by{|likes| likes.thumbs_up_total}.reverse
-		@recipes = Recipe.paginate(page: params[:page], per_page: 4)
+		@recipes = Recipe.paginate(page: params[:page], per_page: 6)
 	end
 
 	def show
@@ -37,6 +37,14 @@ class RecipesController < ApplicationController
 			render :edit
 		end
 	end
+
+	def destroy
+	    @recipe.destroy
+	    respond_to do |format|
+	      format.html { redirect_to pins_url, notice: 'Recipe was successfully destroyed.' }
+	      format.json { head :no_content }
+	    end
+  end
 
 	def like
 		@recipe = Recipe.find(params[:id])
