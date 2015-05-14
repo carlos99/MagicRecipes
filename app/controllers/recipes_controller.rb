@@ -39,14 +39,6 @@ class RecipesController < ApplicationController
 		end
 	end
 
-	def destroy
-	    @recipe.destroy
-	    respond_to do |format|
-	      format.html { redirect_to pins_url, notice: 'Recipe was successfully destroyed.' }
-	      format.json { head :no_content }
-	    end
-  end
-
 	def like
 		like = Like.create(like: params[:like], chef: current_user, recipe: @recipe)
 		if like.valid?
@@ -68,7 +60,7 @@ class RecipesController < ApplicationController
 			@recipe = Recipe.find(params[:id])
 		end
 
-		def require_same_user
+		def require_same_user #Require same use in order to edit your profi
 			if current_user != @recipe.chef
 				flash[:danger] = 'You Can Only Edit your own Recipe'
 				redirect_to recipes_path

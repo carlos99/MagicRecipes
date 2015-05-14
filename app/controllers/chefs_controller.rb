@@ -47,11 +47,10 @@ class ChefsController < ApplicationController
 			@chef = Chef.find(params[:id])
 		end
 
-		def require_same_user
+		def require_same_user #Validate the user for edit profile
 			if current_user != @chef
 				flash[:danger] = "You can only edit your own profile"
-				redirect_to :back
+				redirect_to root_path
 			end
 		end
-
 end
