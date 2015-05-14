@@ -14,7 +14,7 @@
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav floting-menu"> 
                <% if logged_in?%>
-               <li><%= link_to 'Create a New Recipe', new_recipe_path%></li>
+               <li><%= link_to 'Create a New Recipe', new_recipe_path, id: 'btn-new-recipe' %></li>
                  <li class="dropdown">
                   <%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle btn-show-user", "data-toggle" => "dropdown" do %>
                   <%= current_user.chef_name %> <b class="caret"></b>
@@ -29,9 +29,8 @@
                    
                <% else %>
                    <li><%= link_to 'View Recipes', recipes_path%></li>
-                   <li class="li-sessions"><%= link_to 'Login', login_path, class: 'sessions-btns' %></li>
-                   <li class="li-sessions"><%= link_to 'Register', register_path, class: 'sessions-btns' %></li>
-                  
+                   <li class="li-sessions"><%= link_to 'Login', login_path, class: 'sessions-btns', id: 'login-btn-h' %></li>
+                   <li class="li-sessions"><%= link_to 'Register', register_path, class: 'sessions-btns', id: 'register-btn-h' %></li>
                <% end %>
            </ul>
          </div>
