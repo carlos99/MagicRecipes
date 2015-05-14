@@ -64,7 +64,7 @@ body{
 }
 
 header{
-  background-color: #fff;
+  background-color: #1499D3;
 
   nav a{
     text-decoration: none;
@@ -72,9 +72,8 @@ header{
     font-family: "aleo-regular", arial;
     font-size: 16px;
     letter-spacing: .5px;
-    padding-bottom: 10px !important;
-    padding-top: 30px !important;
-    border-bottom: 2px solid #fff !important;
+    padding-bottom: 12px !important;
+    padding-top: 12px !important;
   }
 }
 
@@ -106,12 +105,24 @@ h1{
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-  color: #E9633B !important;
-        border-bottom: 2px solid #E9633B !important;
+  border-bottom: 2px solid #E9633B;
+  color: #2d2d2d;
+}
+
+.navbar-default{
+  background: #1499D3;
+  border: none;
+  padding-top: 20px;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
   border: none !important;
+}
+
+@media (min-width: 768px){
+.navbar-nav > li {
+  margin: 0 3px;
+  }
 }
 
 .custom-jumbotron{
@@ -172,15 +183,22 @@ h1{
   }
 }
 
+.form-container-sessions{
+  input{
+    border-radius: 0;
+  }
+}
+
 .custom-btn{
     background-color: #01548a;
     border: 1px solid #3283C5;
     color: #fff;
-    border-radius: 2px !important;
+    border-radius: 4px !important;
     outline: 0;
     text-align: center;
     -webkit-transition: all .2s linear;
     transition: all .2 linear;
+    padding: 8px 14px;
 }
 
 .content-form-recipes{
@@ -190,9 +208,16 @@ h1{
 
 .frm-bg{
   background: #fff;
-    border-radius: 4px;
+  border-radius: 4px;
   margin-top: 40px;
   margin-bottom: 50px;
+}
+
+.floting-menu{
+  li.li-sessions{
+    background: #F5DF65;
+    border-radius: 5px;
+  }
 }
 
   .floting-menu{
@@ -200,4 +225,19 @@ h1{
         float: right !important;
       }
   }
+
+.sessions-btns{
+  padding: 1px 10px;
+  &:hover, &:focus{
+    border-bottom: none !important;
+    color: #fff !important;
+  }
+}
+
+.btn-show-user{
+  background: #F5DF65;
+  border: none;
+}
+
+
 
